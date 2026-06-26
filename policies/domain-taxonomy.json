@@ -1,0 +1,168 @@
+{
+  "schema_version": "0.1.0",
+  "note": "Universal resource/bookmark domains. Software engineering is a priority lane, not the boundary.",
+  "domains": [
+    {
+      "id": "00_workspace_common_entrypoints",
+      "order": 0,
+      "display_name": "00 Workspace and common entrypoints",
+      "zh_name": "00_工作台与常用入口",
+      "description": "Frequently used entrypoints for daily work and navigation.",
+      "bookmark_export": true
+    },
+    {
+      "id": "01_artificial_intelligence_computational_intelligence",
+      "order": 1,
+      "display_name": "01 Artificial intelligence and computational intelligence",
+      "zh_name": "01_人工智能与计算智能",
+      "description": "AI models, platforms, agents, evaluations, and local model tooling.",
+      "bookmark_export": true
+    },
+    {
+      "id": "02_computer_science_software_engineering_information_systems",
+      "order": 2,
+      "display_name": "02 Computer science, software engineering, and information systems",
+      "zh_name": "02_计算机科学、软件工程与信息系统",
+      "description": "Software engineering, programming, infrastructure, systems, and engineering practice.",
+      "bookmark_export": true
+    },
+    {
+      "id": "03_data_graph_models_knowledge_organization",
+      "order": 3,
+      "display_name": "03 Data, graph models, and knowledge organization",
+      "zh_name": "03_数据、图模型与知识组织",
+      "description": "Data platforms, graphs, semantic resources, and knowledge organization.",
+      "bookmark_export": true
+    },
+    {
+      "id": "04_mathematics_natural_sciences_foundational_research",
+      "order": 4,
+      "display_name": "04 Mathematics, natural sciences, and foundational research",
+      "zh_name": "04_数学、自然科学与基础研究",
+      "description": "Mathematics, papers, science references, and foundational research.",
+      "bookmark_export": true
+    },
+    {
+      "id": "05_engineering_technology_hardware_industrial_systems",
+      "order": 5,
+      "display_name": "05 Engineering technology, hardware, and industrial systems",
+      "zh_name": "05_工程技术、硬件与工业系统",
+      "description": "Hardware, electrical engineering, industrial systems, operating environments, and backup tooling.",
+      "bookmark_export": true
+    },
+    {
+      "id": "06_medicine_health_life_sciences",
+      "order": 6,
+      "display_name": "06 Medicine, health, and life sciences",
+      "zh_name": "06_医学、健康与生命科学",
+      "description": "Medicine, public health, life sciences, and evidence-based references.",
+      "bookmark_export": true
+    },
+    {
+      "id": "07_agriculture_environment_earth_systems",
+      "order": 7,
+      "display_name": "07 Agriculture, environment, and earth systems",
+      "zh_name": "07_农业、环境与地球系统",
+      "description": "Agriculture, climate, environment, geography, and earth systems.",
+      "bookmark_export": true
+    },
+    {
+      "id": "08_history_geography_civilization_studies",
+      "order": 8,
+      "display_name": "08 History, geography, and civilization studies",
+      "zh_name": "08_历史、地理与文明研究",
+      "description": "History, geography, maps, archives, and civilization studies.",
+      "bookmark_export": true
+    },
+    {
+      "id": "09_philosophy_language_literature_humanities",
+      "order": 9,
+      "display_name": "09 Philosophy, language, literature, and humanities",
+      "zh_name": "09_哲学、语言、文学与人文",
+      "description": "Humanities, philosophy, language, literature, and cultural references.",
+      "bookmark_export": true
+    },
+    {
+      "id": "10_social_sciences_economics_organization_studies",
+      "order": 10,
+      "display_name": "10 Social sciences, economics, and organization studies",
+      "zh_name": "10_社会科学、经济与组织研究",
+      "description": "Social sciences, economics, organization studies, and public data.",
+      "bookmark_export": true
+    },
+    {
+      "id": "11_art_design_architecture_media_culture",
+      "order": 11,
+      "display_name": "11 Art, design, architecture, media, and culture",
+      "zh_name": "11_艺术、设计、建筑、媒体与文化",
+      "description": "Design, art, architecture, media, and cultural resources.",
+      "bookmark_export": true
+    },
+    {
+      "id": "12_education_language_learning_lifelong_development",
+      "order": 12,
+      "display_name": "12 Education, language learning, and lifelong development",
+      "zh_name": "12_教育、语言学习与终身发展",
+      "description": "Open courses, learning platforms, language learning, and personal development.",
+      "bookmark_export": true
+    },
+    {
+      "id": "13_law_standards_public_services_compliance",
+      "order": 13,
+      "display_name": "13 Law, standards, public services, and compliance",
+      "zh_name": "13_法律、标准、公共服务与合规",
+      "description": "Laws, standards, compliance, public services, and official references.",
+      "bookmark_export": true
+    },
+    {
+      "id": "14_governance_institutions_public_policy",
+      "order": 14,
+      "display_name": "14 Governance, institutions, and public policy",
+      "zh_name": "14_治理、机构与公共政策",
+      "description": "Government, policy, institutions, NGOs, and governance resources.",
+      "bookmark_export": true
+    },
+    {
+      "id": "15_enterprises_products_industries_technology_ecosystems",
+      "order": 15,
+      "display_name": "15 Enterprises, products, industries, and technology ecosystems",
+      "zh_name": "15_企业、产品、产业与技术生态",
+      "description": "Companies, products, industries, technology ecosystems, and market references.",
+      "bookmark_export": true
+    },
+    {
+      "id": "16_media_sports_entertainment_life_resources",
+      "order": 16,
+      "display_name": "16 Media, sports, entertainment, and life resources",
+      "zh_name": "16_媒体、体育、娱乐与生活资源",
+      "description": "Media, sports, entertainment, life utilities, and general public resources.",
+      "bookmark_export": true
+    },
+    {
+      "id": "17_methodology_cognition_research_tools",
+      "order": 17,
+      "display_name": "17 Methodology, cognition, and research tools",
+      "zh_name": "17_方法论、认知与研究工具",
+      "description": "Research methods, cognition, fact-checking, systems thinking, and methodology.",
+      "bookmark_export": true
+    },
+    {
+      "id": "90_low_trust_fallback_resources",
+      "order": 90,
+      "display_name": "90 Low-trust fallback resources",
+      "zh_name": "90_低信任备用资源",
+      "description": "Fallback resources requiring extra verification; never main-domain authority.",
+      "bookmark_export": true,
+      "fallback_only": true
+    },
+    {
+      "id": "99_archive",
+      "order": 99,
+      "display_name": "99 Archive",
+      "zh_name": "99_历史归档",
+      "description": "Historical, deprecated, or review-later resources.",
+      "bookmark_export": true,
+      "archive_only": true
+    }
+  ]
+}

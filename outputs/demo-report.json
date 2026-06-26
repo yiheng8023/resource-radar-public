@@ -7,7 +7,7 @@
   "resource_count": 8,
   "resources": [
     {
-      "category": "software-platform",
+      "category": "02_computer_science_software_engineering_information_systems",
       "downstream_lanes": [
         "reference",
         "learning",
@@ -23,7 +23,7 @@
       "url": "https://docs.github.com/"
     },
     {
-      "category": "web-development",
+      "category": "02_computer_science_software_engineering_information_systems",
       "downstream_lanes": [
         "reference",
         "learning",
@@ -39,7 +39,7 @@
       "url": "https://developer.mozilla.org/"
     },
     {
-      "category": "open-data",
+      "category": "03_data_graph_models_knowledge_organization",
       "downstream_lanes": [
         "learning",
         "reference",
@@ -55,7 +55,7 @@
       "url": "https://opendatahandbook.org/"
     },
     {
-      "category": "supply-chain-security",
+      "category": "02_computer_science_software_engineering_information_systems",
       "downstream_lanes": [
         "tool",
         "workflow",
@@ -71,7 +71,7 @@
       "url": "https://github.com/ossf/scorecard"
     },
     {
-      "category": "application-security",
+      "category": "02_computer_science_software_engineering_information_systems",
       "downstream_lanes": [
         "reference",
         "learning",
@@ -88,7 +88,7 @@
       "url": "https://owasp.org/www-project-top-ten/"
     },
     {
-      "category": "programming-language",
+      "category": "02_computer_science_software_engineering_information_systems",
       "downstream_lanes": [
         "reference",
         "learning",
@@ -104,7 +104,7 @@
       "url": "https://docs.python.org/3/"
     },
     {
-      "category": "database",
+      "category": "02_computer_science_software_engineering_information_systems",
       "downstream_lanes": [
         "tool",
         "reference",
@@ -121,7 +121,7 @@
       "url": "https://www.sqlite.org/"
     },
     {
-      "category": "web-standards",
+      "category": "13_law_standards_public_services_compliance",
       "downstream_lanes": [
         "reference",
         "standard",

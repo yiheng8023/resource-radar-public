@@ -13,6 +13,16 @@ research papers, bookmarks, agent skills, or project templates.
 5. Let multiple downstream lanes consume the same normalized record.
 6. Keep automation gated, deterministic, and auditable.
 
+## Shared taxonomy
+
+The public template includes a universal domain taxonomy aligned with the
+bookmark lane. This keeps the human-facing directory and machine-facing radar
+records connected without collapsing them into the same thing.
+
+The taxonomy lives in `policies/domain-taxonomy.json`; the deeper record model
+still keeps source type, lifecycle, trust, risk, downstream lane, and visibility
+as separate axes.
+
 ## Non-goals
 
 - no blind auto-import into downstream repositories;

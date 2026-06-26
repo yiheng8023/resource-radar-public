@@ -39,6 +39,7 @@ public candidates
 - A public-safe resource record schema.
 - Demo resource records using only public, official, or broadly reusable
   examples.
+- A universal domain taxonomy aligned with the bookmark lane.
 - Configurable scoring and lifecycle policies.
 - A deterministic demo report generator.
 - Verification scripts that check schema shape, generated output, and obvious
@@ -106,6 +107,8 @@ data/demo/              public-safe demo resource records
 docs/                   design, boundary, source policy, relationship map
 outputs/                deterministic generated demo report
 policies/               scoring and lifecycle policy examples
+policies/domain-taxonomy.json
+                        universal public domain taxonomy
 schemas/                resource record schema
 scripts/                demo generation and verification scripts
 ```

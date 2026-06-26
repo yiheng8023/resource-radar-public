@@ -31,6 +31,7 @@
 
 - 公开安全的资源记录 schema。
 - 仅使用公开、官方或通用示例的 demo 资源记录。
+- 与书签 lane 对齐的通用领域 taxonomy。
 - 可配置的评分和生命周期策略。
 - 确定性的 demo 报告生成器。
 - 用于检查 schema 形态、生成产物和明显私有数据误入的验证脚本。
@@ -92,6 +93,8 @@ data/demo/              公开安全 demo 资源记录
 docs/                   设计、边界、来源政策、关系图
 outputs/                确定性生成的 demo 报告
 policies/               评分与生命周期策略示例
+policies/domain-taxonomy.json
+                        通用公开领域 taxonomy
 schemas/                资源记录 schema
 scripts/                demo 生成与验证脚本
 ```

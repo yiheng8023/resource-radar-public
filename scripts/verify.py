@@ -22,10 +22,12 @@ REQUIRED_FILES = [
     "schemas/resource.schema.json",
     "policies/scoring.json",
     "policies/lifecycle.json",
+    "policies/domain-taxonomy.json",
     "data/demo/resources.json",
     "docs/public-private-boundary.md",
     "docs/design-basis.md",
     "docs/source-policy.md",
+    "docs/universal-taxonomy.md",
     "docs/relationship-map.md",
     "docs/automation-boundary.md",
     "outputs/demo-report.md",
@@ -94,10 +96,35 @@ def verify_policy_versions() -> None:
     for rel in ["policies/scoring.json", "policies/lifecycle.json", "data/demo/resources.json"]:
         if read_json(rel).get("schema_version") != 1:
             fail(f"{rel} schema_version must be 1")
+    if read_json("policies/domain-taxonomy.json").get("schema_version") != "0.1.0":
+        fail("policies/domain-taxonomy.json schema_version must be 0.1.0")
+
+
+def verify_domain_taxonomy() -> set[str]:
+    data = read_json("policies/domain-taxonomy.json")
+    seen: set[str] = set()
+    orders: set[int] = set()
+    for item in data.get("domains", []):
+        for key in ["id", "order", "display_name", "zh_name", "description"]:
+            if key not in item:
+                fail(f"domain taxonomy item missing {key}")
+        if item["id"] in seen:
+            fail(f"duplicate domain id: {item['id']}")
+        if item["order"] in orders:
+            fail(f"duplicate domain order: {item['order']}")
+        seen.add(item["id"])
+        orders.add(item["order"])
+    if len(seen) < 20:
+        fail("domain taxonomy must include the 18 main domains plus reserved fallback/archive domains")
+    for required in ["90_low_trust_fallback_resources", "99_archive"]:
+        if required not in seen:
+            fail(f"domain taxonomy missing reserved domain: {required}")
+    return seen
 
 
 def verify_resources() -> None:
     data = read_json("data/demo/resources.json")
+    domain_ids = verify_domain_taxonomy()
     ids = set()
     for item in data.get("resources", []):
         for key in [
@@ -120,6 +147,8 @@ def verify_resources() -> None:
         parsed = urlparse(item["url"])
         if parsed.scheme != "https" or not parsed.netloc:
             fail(f"resource url must be public https: {item['id']}")
+        if item["category"] not in domain_ids:
+            fail(f"resource category is not in domain taxonomy: {item['id']} -> {item['category']}")
         if item["visibility"] != "public":
             fail(f"resource visibility must be public: {item['id']}")
         lanes = set(item["downstream_lanes"])
