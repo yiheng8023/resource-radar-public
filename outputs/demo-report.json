@@ -1,0 +1,142 @@
+{
+  "generated_from": [
+    "data/demo/resources.json",
+    "policies/scoring.json",
+    "policies/lifecycle.json"
+  ],
+  "resource_count": 8,
+  "resources": [
+    {
+      "category": "software-platform",
+      "downstream_lanes": [
+        "reference",
+        "learning",
+        "bookmark_seed"
+      ],
+      "id": "github-docs",
+      "license_status": "not_applicable",
+      "name": "GitHub Docs",
+      "score": 100,
+      "source_type": "official_docs",
+      "state": "adopt",
+      "trust_tier": "official",
+      "url": "https://docs.github.com/"
+    },
+    {
+      "category": "web-development",
+      "downstream_lanes": [
+        "reference",
+        "learning",
+        "bookmark_seed"
+      ],
+      "id": "mdn-web-docs",
+      "license_status": "clear",
+      "name": "MDN Web Docs",
+      "score": 100,
+      "source_type": "official_docs",
+      "state": "adopt",
+      "trust_tier": "primary",
+      "url": "https://developer.mozilla.org/"
+    },
+    {
+      "category": "open-data",
+      "downstream_lanes": [
+        "learning",
+        "reference",
+        "bookmark_seed"
+      ],
+      "id": "open-data-handbook",
+      "license_status": "needs_manual_review",
+      "name": "Open Data Handbook",
+      "score": 72,
+      "source_type": "learning",
+      "state": "reference",
+      "trust_tier": "primary",
+      "url": "https://opendatahandbook.org/"
+    },
+    {
+      "category": "supply-chain-security",
+      "downstream_lanes": [
+        "tool",
+        "workflow",
+        "reference"
+      ],
+      "id": "openssf-scorecard",
+      "license_status": "clear",
+      "name": "OpenSSF Scorecard",
+      "score": 90,
+      "source_type": "tool",
+      "state": "adopt",
+      "trust_tier": "primary",
+      "url": "https://github.com/ossf/scorecard"
+    },
+    {
+      "category": "application-security",
+      "downstream_lanes": [
+        "reference",
+        "learning",
+        "bookmark_seed",
+        "standard"
+      ],
+      "id": "owasp-top-ten",
+      "license_status": "clear",
+      "name": "OWASP Top 10",
+      "score": 94,
+      "source_type": "standard",
+      "state": "adopt",
+      "trust_tier": "primary",
+      "url": "https://owasp.org/www-project-top-ten/"
+    },
+    {
+      "category": "programming-language",
+      "downstream_lanes": [
+        "reference",
+        "learning",
+        "bookmark_seed"
+      ],
+      "id": "python-docs",
+      "license_status": "clear",
+      "name": "Python Documentation",
+      "score": 96,
+      "source_type": "official_docs",
+      "state": "adopt",
+      "trust_tier": "official",
+      "url": "https://docs.python.org/3/"
+    },
+    {
+      "category": "database",
+      "downstream_lanes": [
+        "tool",
+        "reference",
+        "learning",
+        "bookmark_seed"
+      ],
+      "id": "sqlite",
+      "license_status": "clear",
+      "name": "SQLite",
+      "score": 96,
+      "source_type": "tool",
+      "state": "adopt",
+      "trust_tier": "official",
+      "url": "https://www.sqlite.org/"
+    },
+    {
+      "category": "web-standards",
+      "downstream_lanes": [
+        "reference",
+        "standard",
+        "learning",
+        "bookmark_seed"
+      ],
+      "id": "w3c-standards",
+      "license_status": "not_applicable",
+      "name": "W3C Standards and Drafts",
+      "score": 86,
+      "source_type": "standard",
+      "state": "adopt",
+      "trust_tier": "official",
+      "url": "https://www.w3.org/TR/"
+    }
+  ],
+  "schema_version": 1
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "states": {
+    "candidate": "Worth tracking, not reviewed for downstream use.",
+    "watch": "Promising but needs follow-up.",
+    "reference": "Useful as a public reference or benchmark.",
+    "adopt": "Strong enough to consider for a downstream lane.",
+    "reject": "Do not promote; retain only if evidence is useful.",
+    "retired": "Previously useful but no longer recommended."
+  },
+  "rules": [
+    {
+      "state": "adopt",
+      "minimum_score": 82,
+      "requires_license_status": ["clear", "not_applicable"]
+    },
+    {
+      "state": "reference",
+      "minimum_score": 72,
+      "requires_license_status": ["clear", "needs_manual_review", "not_applicable"]
+    },
+    {
+      "state": "watch",
+      "minimum_score": 55,
+      "requires_license_status": ["clear", "needs_manual_review", "not_applicable"]
+    },
+    {
+      "state": "candidate",
+      "minimum_score": 0,
+      "requires_license_status": ["clear", "needs_manual_review", "not_applicable"]
+    }
+  ]
+}

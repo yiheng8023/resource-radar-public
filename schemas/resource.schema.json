@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/yiheng8023/resource-radar-public/schemas/resource.schema.json",
+  "title": "Public Resource Radar Record",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "url",
+    "category",
+    "source_type",
+    "trust_tier",
+    "visibility",
+    "downstream_lanes",
+    "license_review",
+    "signals"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]*$"
+    },
+    "name": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "category": {
+      "type": "string"
+    },
+    "source_type": {
+      "enum": ["official_docs", "standard", "tool", "reference", "dataset", "workflow", "learning"]
+    },
+    "trust_tier": {
+      "enum": ["official", "primary", "community", "unknown"]
+    },
+    "visibility": {
+      "enum": ["public"]
+    },
+    "downstream_lanes": {
+      "type": "array",
+      "items": {
+        "enum": ["tool", "reference", "learning", "bookmark_seed", "skill_candidate", "dataset", "workflow", "standard"]
+      },
+      "uniqueItems": true
+    },
+    "license_review": {
+      "type": "object",
+      "required": ["status"],
+      "properties": {
+        "status": {
+          "enum": ["clear", "needs_manual_review", "not_applicable"]
+        },
+        "note": {
+          "type": "string"
+        }
+      }
+    },
+    "signals": {
+      "type": "object",
+      "required": ["authority", "documentation", "freshness", "maintenance", "downstream_fit", "private_risk"],
+      "properties": {
+        "authority": { "type": "integer", "minimum": 0, "maximum": 5 },
+        "documentation": { "type": "integer", "minimum": 0, "maximum": 5 },
+        "freshness": { "type": "integer", "minimum": 0, "maximum": 5 },
+        "maintenance": { "type": "integer", "minimum": 0, "maximum": 5 },
+        "downstream_fit": { "type": "integer", "minimum": 0, "maximum": 5 },
+        "private_risk": { "type": "integer", "minimum": 0, "maximum": 5 }
+      }
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

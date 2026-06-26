@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "score_scale": "0-100",
+  "weights": {
+    "authority": 0.22,
+    "documentation": 0.18,
+    "freshness": 0.16,
+    "maintenance": 0.16,
+    "downstream_fit": 0.18,
+    "private_risk_inverse": 0.10
+  },
+  "notes": [
+    "Stars and social popularity are intentionally not required by this public demo.",
+    "Private risk is inverted: lower private coupling increases the public-safe score.",
+    "Scores are review aids, not automatic promotion decisions."
+  ]
+}

@@ -1,0 +1,7 @@
+resource-radar-public
+
+This repository contains public-safe schemas, demo fixtures, policies,
+documentation, and scripts for resource radar workflows.
+
+It must not contain private candidate pools, credentials, browser/session data,
+personal preferences, local paths, private bookmarks, or private review notes.

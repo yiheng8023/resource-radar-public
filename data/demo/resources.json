@@ -1,0 +1,189 @@
+{
+  "schema_version": 1,
+  "resources": [
+    {
+      "id": "github-docs",
+      "name": "GitHub Docs",
+      "url": "https://docs.github.com/",
+      "category": "software-platform",
+      "source_type": "official_docs",
+      "trust_tier": "official",
+      "visibility": "public",
+      "downstream_lanes": ["reference", "learning", "bookmark_seed"],
+      "license_review": {
+        "status": "not_applicable",
+        "note": "Documentation reference; downstream reuse still follows GitHub terms."
+      },
+      "signals": {
+        "authority": 5,
+        "documentation": 5,
+        "freshness": 5,
+        "maintenance": 5,
+        "downstream_fit": 5,
+        "private_risk": 0
+      },
+      "notes": "Primary reference for GitHub workflows and automation boundaries."
+    },
+    {
+      "id": "mdn-web-docs",
+      "name": "MDN Web Docs",
+      "url": "https://developer.mozilla.org/",
+      "category": "web-development",
+      "source_type": "official_docs",
+      "trust_tier": "primary",
+      "visibility": "public",
+      "downstream_lanes": ["reference", "learning", "bookmark_seed"],
+      "license_review": {
+        "status": "clear",
+        "note": "Public documentation with documented reuse terms; verify before redistribution."
+      },
+      "signals": {
+        "authority": 5,
+        "documentation": 5,
+        "freshness": 5,
+        "maintenance": 5,
+        "downstream_fit": 5,
+        "private_risk": 0
+      },
+      "notes": "High-quality web platform documentation."
+    },
+    {
+      "id": "python-docs",
+      "name": "Python Documentation",
+      "url": "https://docs.python.org/3/",
+      "category": "programming-language",
+      "source_type": "official_docs",
+      "trust_tier": "official",
+      "visibility": "public",
+      "downstream_lanes": ["reference", "learning", "bookmark_seed"],
+      "license_review": {
+        "status": "clear",
+        "note": "Official documentation; check PSF terms for redistribution."
+      },
+      "signals": {
+        "authority": 5,
+        "documentation": 5,
+        "freshness": 5,
+        "maintenance": 5,
+        "downstream_fit": 4,
+        "private_risk": 0
+      },
+      "notes": "Official Python language and standard library reference."
+    },
+    {
+      "id": "openssf-scorecard",
+      "name": "OpenSSF Scorecard",
+      "url": "https://github.com/ossf/scorecard",
+      "category": "supply-chain-security",
+      "source_type": "tool",
+      "trust_tier": "primary",
+      "visibility": "public",
+      "downstream_lanes": ["tool", "workflow", "reference"],
+      "license_review": {
+        "status": "clear",
+        "note": "Open source project; verify current license before vendoring."
+      },
+      "signals": {
+        "authority": 4,
+        "documentation": 4,
+        "freshness": 5,
+        "maintenance": 5,
+        "downstream_fit": 5,
+        "private_risk": 1
+      },
+      "notes": "Useful reference for supply-chain quality signals."
+    },
+    {
+      "id": "owasp-top-ten",
+      "name": "OWASP Top 10",
+      "url": "https://owasp.org/www-project-top-ten/",
+      "category": "application-security",
+      "source_type": "standard",
+      "trust_tier": "primary",
+      "visibility": "public",
+      "downstream_lanes": ["reference", "learning", "bookmark_seed", "standard"],
+      "license_review": {
+        "status": "clear",
+        "note": "Public OWASP project; verify current terms before redistribution."
+      },
+      "signals": {
+        "authority": 5,
+        "documentation": 5,
+        "freshness": 4,
+        "maintenance": 4,
+        "downstream_fit": 5,
+        "private_risk": 0
+      },
+      "notes": "Widely used application security baseline."
+    },
+    {
+      "id": "sqlite",
+      "name": "SQLite",
+      "url": "https://www.sqlite.org/",
+      "category": "database",
+      "source_type": "tool",
+      "trust_tier": "official",
+      "visibility": "public",
+      "downstream_lanes": ["tool", "reference", "learning", "bookmark_seed"],
+      "license_review": {
+        "status": "clear",
+        "note": "Public domain project; verify current upstream notice before packaging."
+      },
+      "signals": {
+        "authority": 5,
+        "documentation": 5,
+        "freshness": 5,
+        "maintenance": 5,
+        "downstream_fit": 4,
+        "private_risk": 0
+      },
+      "notes": "Durable embedded database resource."
+    },
+    {
+      "id": "w3c-standards",
+      "name": "W3C Standards and Drafts",
+      "url": "https://www.w3.org/TR/",
+      "category": "web-standards",
+      "source_type": "standard",
+      "trust_tier": "official",
+      "visibility": "public",
+      "downstream_lanes": ["reference", "standard", "learning", "bookmark_seed"],
+      "license_review": {
+        "status": "not_applicable",
+        "note": "Standards reference; reuse governed by W3C document policy."
+      },
+      "signals": {
+        "authority": 5,
+        "documentation": 4,
+        "freshness": 4,
+        "maintenance": 4,
+        "downstream_fit": 4,
+        "private_risk": 0
+      },
+      "notes": "Primary source for web standards."
+    },
+    {
+      "id": "open-data-handbook",
+      "name": "Open Data Handbook",
+      "url": "https://opendatahandbook.org/",
+      "category": "open-data",
+      "source_type": "learning",
+      "trust_tier": "primary",
+      "visibility": "public",
+      "downstream_lanes": ["learning", "reference", "bookmark_seed"],
+      "license_review": {
+        "status": "needs_manual_review",
+        "note": "Useful reference; verify current license and freshness before reuse."
+      },
+      "signals": {
+        "authority": 4,
+        "documentation": 4,
+        "freshness": 3,
+        "maintenance": 3,
+        "downstream_fit": 3,
+        "private_risk": 0
+      },
+      "notes": "Example of a useful but review-needed public resource."
+    }
+  ]
+}
