@@ -4,20 +4,30 @@
 
 一个公开安全、Agent 中立、工具中立的资源雷达起步模板：用于收集公开资源、规范化元数据、评估质量信号、跟踪生命周期，并生成可审查报告，而不暴露私有候选池。
 
-这个仓库是私有资源雷达工作流的公开模板 / 公开投影。它刻意保持通用：可以服务 GitHub 项目、技术文档、研究资源、书签目录、Agent Skills、学习资料，以及其它有价值的公开资源。
+这个仓库是私有资源雷达工作流的公开模板和示例。它刻意保持通用：可以服务 GitHub 项目、技术文档、研究资源、书签目录、Agent Skills、学习资料，以及其它有价值的公开资源。
+
+## 从这里开始
+
+| 你想做什么 | 入口 |
+| --- | --- |
+| 查看生成的示例报告 | [`outputs/demo-report.md`](outputs/demo-report.md) |
+| 查看示例资源记录 | [`data/demo/`](data/demo) |
+| 理解评分和生命周期策略 | [`policies/`](policies) |
+| 本地运行示例 | `python -B scripts/run_demo.py --check` |
+| 理解整套系统 | [`open-resource-governance/docs/system-topology.md`](https://github.com/yiheng8023/open-resource-governance/blob/main/docs/system-topology.md) |
 
 ## 系统位置
 
 本仓库是
 [`open-resource-governance`](https://github.com/yiheng8023/open-resource-governance)
-生态中的一个公开 lane。
+生态中的一个公开资源发现链路。
 
 ```text
 open-resource-governance
   -> 负责全局地图、公开/私有边界和发布闸门
 
 resource-radar-public
-  -> 提供公开安全 schema、评分/生命周期示例、demo 报告和验证
+  -> 提供公开安全资源结构、评分/生命周期示例、示例报告和验证
 
 私有 resource-radar
   -> 可以保存真实候选池、快照、账号相关自动化和审查笔记
@@ -50,17 +60,17 @@ agent-skills-curated
 -> 评分与生命周期策略
 -> 确定性报告
 -> 审查闸门
--> 面向下游的专用投影
+-> 面向下游的专用结果
 ```
 
 ## 本仓库提供什么
 
-- 公开安全的资源记录 schema。
-- 仅使用公开、官方或通用示例的 demo 资源记录。
-- 与书签 lane 对齐的通用领域 taxonomy。
+- 公开安全的资源记录结构。
+- 仅使用公开、官方或通用示例的资源记录。
+- 与书签链路对齐的通用领域分类。
 - 可配置的评分和生命周期策略。
-- 确定性的 demo 报告生成器。
-- 用于检查 schema 形态、生成产物和明显私有数据误入的验证脚本。
+- 确定性的示例报告生成器。
+- 用于检查数据结构、生成产物和明显私有数据误入的验证脚本。
 - 公私边界、来源政策、自动化边界和下游关系文档。
 
 ## 本仓库不负责什么
@@ -76,21 +86,21 @@ agent-skills-curated
 
 ## 与私有雷达的关系
 
-配对的私有 lane 是 `resource-radar`。
+配对的私有仓是 `resource-radar`。
 
 ```text
 resource-radar
   私有来源、真实候选池、快照、审查笔记、账号相关自动化
 
 resource-radar-public
-  公开 schema、demo fixtures、评分/生命周期示例、报告、验证
+  公开资源结构、示例记录、评分/生命周期示例、报告、验证
 ```
 
-私有自动化可以消费这个公开模板，但公开用户不需要访问私有仓库，也能理解并运行 demo。
+私有自动化可以消费这个公开模板，但公开用户不需要访问私有仓库，也能理解并运行示例。
 
 ## Agent 中立与工具中立
 
-本仓库不是 Codex 专属、Claude 专属，也不是某个 Agent 专属。Agent Skills 只是可能的下游 lane 之一。其它 lane 可以是书签、软件工具、学习资源、参考目录、数据集、文档来源，或未来的项目专用投影。
+本仓库不是 Codex 专属、Claude 专属，也不是某个 Agent 专属。Agent Skills 只是可能的下游方向之一。其它方向可以是书签、软件工具、学习资源、参考目录、数据集、文档来源，或未来的项目专用结果。
 
 ## 快速开始
 
@@ -101,7 +111,7 @@ python -B scripts/run_demo.py --check
 python -B scripts/verify.py
 ```
 
-重新生成 demo 报告：
+重新生成示例报告：
 
 ```bash
 python -B scripts/run_demo.py
@@ -115,26 +125,26 @@ python -B scripts/run_demo.py
 ## 目录结构
 
 ```text
-data/demo/              公开安全 demo 资源记录
+data/demo/              公开安全示例资源记录
 docs/                   设计、边界、来源政策、关系图
-outputs/                确定性生成的 demo 报告
+outputs/                确定性生成的示例报告
 policies/               评分与生命周期策略示例
 policies/domain-taxonomy.json
-                        通用公开领域 taxonomy
-schemas/                资源记录 schema
-scripts/                demo 生成与验证脚本
+                        通用公开领域分类
+schemas/                资源记录结构
+scripts/                示例生成与验证脚本
 ```
 
 ## 资源生命周期
 
-demo 使用保守的状态模型：
+示例使用保守的状态模型：
 
 | 状态 | 含义 |
 | --- | --- |
 | `candidate` | 值得跟踪，但尚未审查进入下游 |
 | `watch` | 有潜力，但需要补充新鲜度、许可证或质量证据 |
 | `reference` | 适合作为公开参考或基线 |
-| `adopt` | 足够强，可考虑进入下游 lane |
+| `adopt` | 足够强，可考虑进入下游方向 |
 | `reject` | 不应晋级；仅在证据有价值时保留 |
 | `retired` | 曾经有用，但现在不再推荐 |
 
@@ -142,7 +152,7 @@ demo 使用保守的状态模型：
 
 ## 质量信号
 
-公开 demo 刻意把 star 视为可选弱信号。评分更偏向容易审计的证据：
+公开示例刻意把 star 视为可选弱信号。评分更偏向容易审计的证据：
 
 - 官方或权威来源；
 - 文档清晰；
@@ -152,9 +162,9 @@ demo 使用保守的状态模型：
 - 下游适配度；
 - 私有数据和账号耦合风险低。
 
-## 下游 lane
+## 下游方向
 
-一个资源可以映射到多个 lane：
+一个资源可以映射到多个方向：
 
 - `tool`
 - `reference`
@@ -173,11 +183,11 @@ demo 使用保守的状态模型：
 
 - 必需文件存在；
 - 资源 ID 唯一；
-- demo 记录符合公开安全结构；
+- 示例记录符合公开安全结构；
 - 生成报告确定且已更新；
 - 公开文件不包含明显私有字段；
 - URL 是 HTTPS 公开引用；
-- policy 文件符合预期 schema 版本。
+- 策略文件符合预期结构版本。
 
 ## 安全边界
 

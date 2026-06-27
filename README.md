@@ -7,14 +7,24 @@ public resources, normalize metadata, score quality signals, track lifecycle
 state, and generate reviewable reports without exposing a private candidate
 pool.
 
-This repository is the public template/projection for a private resource radar
+This repository is the public template and demo surface for a private resource radar
 workflow. It is intentionally generic: it can support GitHub projects,
 technical documentation, research resources, bookmark catalogs, agent skills,
 learning materials, and other useful public resources.
 
+## Start here
+
+| If you want to... | Go here |
+| --- | --- |
+| See the generated demo report | [`outputs/demo-report.md`](outputs/demo-report.md) |
+| Inspect demo resource records | [`data/demo/`](data/demo) |
+| Review scoring and lifecycle policy | [`policies/`](policies) |
+| Run the demo locally | `python -B scripts/run_demo.py --check` |
+| Understand the full system | [`open-resource-governance/docs/system-topology.md`](https://github.com/yiheng8023/open-resource-governance/blob/main/docs/system-topology.md) |
+
 ## System context
 
-This repository is one public lane in the
+This repository is one public workstream in the
 [`open-resource-governance`](https://github.com/yiheng8023/open-resource-governance)
 ecosystem.
 
@@ -23,7 +33,7 @@ open-resource-governance
   -> maps the whole system, public/private boundaries, and release gates
 
 resource-radar-public
-  -> provides public-safe schema, scoring/lifecycle examples, demo reports, and validation
+  -> provides public-safe resource structure, scoring/lifecycle examples, demo reports, and validation
 
 private resource-radar
   -> may keep real candidate pools, snapshots, account-specific automation, and review notes
@@ -58,15 +68,15 @@ public candidates
 -> scoring and lifecycle policy
 -> deterministic report
 -> review gate
--> downstream-specific projection
+-> downstream-specific output
 ```
 
 ## What this repository provides
 
-- A public-safe resource record schema.
+- A public-safe resource record structure.
 - Demo resource records using only public, official, or broadly reusable
   examples.
-- A universal domain taxonomy aligned with the bookmark lane.
+- A universal domain taxonomy aligned with the bookmark workstream.
 - Configurable scoring and lifecycle policies.
 - A deterministic demo report generator.
 - Verification scripts that check schema shape, generated output, and obvious
@@ -87,14 +97,14 @@ This repository does not:
 
 ## Relationship to the private radar
 
-The paired private lane is `resource-radar`.
+The paired private repository is `resource-radar`.
 
 ```text
 resource-radar
   private source, true candidate pool, snapshots, review notes, account-specific automation
 
 resource-radar-public
-  public schema, demo fixtures, scoring/lifecycle examples, reports, validation
+  public resource structure, demo records, scoring/lifecycle examples, reports, validation
 ```
 
 Private automation may consume this public template, but public users should not
@@ -103,9 +113,9 @@ need the private repository to understand or run the demo.
 ## Agent-neutral and tool-neutral
 
 This repository is not Codex-specific, Claude-specific, or agent-specific.
-Agent skills are only one possible downstream lane. Other lanes may include
+Agent skills are only one possible downstream target. Other targets may include
 bookmarks, software tools, learning resources, reference catalogs, datasets,
-documentation sources, or future project-specific projections.
+documentation sources, or future project-specific outputs.
 
 ## Quick start
 
@@ -149,7 +159,7 @@ The demo uses a conservative state model:
 | `candidate` | Worth tracking, not yet reviewed for downstream use |
 | `watch` | Promising but needs freshness, license, or quality follow-up |
 | `reference` | Useful as a public reference or benchmark |
-| `adopt` | Strong enough to consider for a downstream lane |
+| `adopt` | Strong enough to consider for a downstream target |
 | `reject` | Do not promote; keep only if evidence is useful |
 | `retired` | Previously useful but no longer recommended |
 
@@ -168,9 +178,9 @@ signals that are easier to audit:
 - downstream fit;
 - low private-data and account-coupling risk.
 
-## Downstream lanes
+## Downstream targets
 
-A resource can map to multiple lanes:
+A resource can map to multiple targets:
 
 - `tool`
 - `reference`
