@@ -87,9 +87,19 @@ def verify_language_links() -> None:
         "private candidate pool",
         "stars as optional and weak",
         "downstream lanes",
+        "system context",
+        "open-resource-governance/docs/system-topology.md",
+        "public-safe schema, scoring/lifecycle examples",
     ]:
         if phrase not in english_lower:
             fail(f"README.md missing phrase: {phrase}")
+    for phrase in [
+        "系统位置",
+        "open-resource-governance/docs/system-topology.md",
+        "公开安全 schema",
+    ]:
+        if phrase not in chinese:
+            fail(f"README.zh-CN.md missing phrase: {phrase}")
 
 
 def verify_policy_versions() -> None:

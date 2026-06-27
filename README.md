@@ -12,6 +12,33 @@ workflow. It is intentionally generic: it can support GitHub projects,
 technical documentation, research resources, bookmark catalogs, agent skills,
 learning materials, and other useful public resources.
 
+## System context
+
+This repository is one public lane in the
+[`open-resource-governance`](https://github.com/yiheng8023/open-resource-governance)
+ecosystem.
+
+```text
+open-resource-governance
+  -> maps the whole system, public/private boundaries, and release gates
+
+resource-radar-public
+  -> provides public-safe schema, scoring/lifecycle examples, demo reports, and validation
+
+private resource-radar
+  -> may keep real candidate pools, snapshots, account-specific automation, and review notes
+
+research-bookmarks-public
+  -> can provide public source seeds for future discovery
+
+agent-skills-curated
+  -> may consume reviewed skill candidates after separate admission
+```
+
+If you only need the radar pattern, start here. If you need the whole repository
+family map, see the hub topology:
+[`open-resource-governance/docs/system-topology.md`](https://github.com/yiheng8023/open-resource-governance/blob/main/docs/system-topology.md).
+
 ## What problem does this solve?
 
 Good resources decay into noise when they are collected without structure:

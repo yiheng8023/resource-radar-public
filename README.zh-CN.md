@@ -6,6 +6,32 @@
 
 这个仓库是私有资源雷达工作流的公开模板 / 公开投影。它刻意保持通用：可以服务 GitHub 项目、技术文档、研究资源、书签目录、Agent Skills、学习资料，以及其它有价值的公开资源。
 
+## 系统位置
+
+本仓库是
+[`open-resource-governance`](https://github.com/yiheng8023/open-resource-governance)
+生态中的一个公开 lane。
+
+```text
+open-resource-governance
+  -> 负责全局地图、公开/私有边界和发布闸门
+
+resource-radar-public
+  -> 提供公开安全 schema、评分/生命周期示例、demo 报告和验证
+
+私有 resource-radar
+  -> 可以保存真实候选池、快照、账号相关自动化和审查笔记
+
+research-bookmarks-public
+  -> 可以为后续发现提供公开来源种子
+
+agent-skills-curated
+  -> 只在单独准入后消费已审查 Skill 候选
+```
+
+如果你只需要资源雷达模式，从本仓开始即可。若要理解整个仓库家族关系，请看总仓拓扑：
+[`open-resource-governance/docs/system-topology.md`](https://github.com/yiheng8023/open-resource-governance/blob/main/docs/system-topology.md)。
+
 ## 它解决什么问题？
 
 好资源如果没有结构化治理，很快会变成噪音：
